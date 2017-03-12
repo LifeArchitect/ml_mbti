@@ -1,0 +1,57 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Sixerr App</title>
+    <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}">
+    <link rel="stylesheet" href="{% static 'css/app.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/indico.js' %}"></script>
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="navbar-inverse">
+        <div class="container">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="/"><img src="{% static 'img/logo.jpg'%}" height="23"></a>
+          </div>
+          <form class="navbar-form navbar-left" role="search">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Find Services">
+            </div>
+          </form>
+        </div>
+      </div>
+      <div id="category">
+        <div class="container">
+          <ul class="nav navbar-nav">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Analysts</a></li>
+            <li><a href="#">Diplomats</a></li>
+            <li><a href="#">Sentinels</a></li>
+            <li><a href="#">Explorers</a></li>
+        </div>
+      </div>
+    </nav>
+    <div id="body">
+      <div class="container">
+        <form class = "form" method="post" action="hello" onsubmit="return false;">
+          <script src="{% static 'js/indico.js' %}"></script>
+          <h1>Enter Person's Text:</h1>
+          <br><textarea name="nlp" rows="15" cols="150"  type="text" id="userInput"></textarea><br>
+          <input type="submit" value="Predict MBTI" class="nlp" onclick="predictMbti();">
+        </form>
+    {{ blockpage }}
+    {{ endblock }}
+      </div>
+    </div>
+    <footer id="footer">
+     <div class="container">
+       <span>MBTI App &copy; 2017</span>
+     </div>
+   </footer>
+  </body>
+</html>
