@@ -16,6 +16,8 @@ function predictMbti() {
     // API Output: Array of probabilities
     var a = indico.personas(input);
     //.then(response);
+    alert("The predicted MBTI type is: " + a);
+
     // var prediction = combPercent(a);
 
     alert("The predicted MBTI type is: " + a);
