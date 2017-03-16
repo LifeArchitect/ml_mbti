@@ -16,9 +16,9 @@ function predictMbti() {
     // API Output: Array of probabilities
     var a = indico.personas(input);
     //.then(response);
-    var prediction = combPercent(a);
+    // var prediction = combPercent(a);
 
-    alert("The predicted MBTI type is: " + prediction);
+    alert("The predicted MBTI type is: " + a);
     // alert("The predicted MBTI couldnt work :( " );
 
     return false;
@@ -29,6 +29,7 @@ function predictMbti() {
 
 }
 
+/*
 // convert to class
   dictClass = {'commander': 'Analyst',
           'debater': 'Analyst',
@@ -96,3 +97,4 @@ function combPercent(a) {
 
   return c;
 }
+*/
