@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <title>Sixerr App</title>
-    <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}"> 
+    <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}">
     <link rel="stylesheet" href="{% static 'css/app.css' %}">
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
@@ -39,7 +39,7 @@
     <div id="body">
       <div class="container">
         <form class = "form" method="post" action="hello" onsubmit="return false;">
-          <script src="{% static 'js/indico.js' %}"></script>
+          <script src="{% static 'js/indico.js?v=00008' %}"></script>
           <h1>Enter Person's Text:</h1>
           <br><textarea name="nlp" rows="15" cols="150"  type="text" id="userInput"></textarea><br>
           <input type="submit" value="Predict MBTI" class="nlp" onclick="predictMbti();">
