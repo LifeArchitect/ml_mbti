@@ -14,7 +14,7 @@ function predictMbti() {
 
     // API Input: String
     // API Output: Array of probabilities
-    var a = indico.personas(input);
+    var a = indico.personas("hello there my name is tony");
     //.then(response);
     alert("The predicted MBTI type is: " + a);
 
