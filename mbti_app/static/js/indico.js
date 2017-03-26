@@ -19,8 +19,11 @@ function predictMbti() {
 
     alert("The predicted MBTI type is: ");
 
-    var response = function(res) { alert("The predicted MBTI type is: " + res); }
-    var logError = function(err) { alert("The predicted MBTI type is: " + err); }
+    // var response = function(res) { alert("The predicted MBTI type is: " + res); }
+    // var logError = function(err) { alert("The predicted MBTI type is: " + err); }
+
+    var response = function(res) { console.log(res); }
+    var logError = function(err) { console.log(err); }
 
     // single example
     indico.personas("I only stay home on Saturday nights to read.")
