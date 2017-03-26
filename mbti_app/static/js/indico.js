@@ -19,13 +19,17 @@ function predictMbti() {
     // API Input: String
     // API Output: Array of probabilities
     alert("The predicted MBTI type is: ");
+
+    var prediction = indico.personas(input);
+    alert("The predicted MBTI type is: " + prediction);
+
     indico.personas("hello there my name is tony").then(response);
 
     var a = indico.personas("hello there my name is tony").then(response);
     alert("The predicted MBTI type is: " + a);
 
     // var prediction = combPercent(a);
-
+    var input2 = document.getElementById("resultDiv").innerHTML = person.getFullAddress();
 
     // alert("The predicted MBTI couldnt work :( " );
 
