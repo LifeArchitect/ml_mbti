@@ -1,5 +1,7 @@
 // Method 1: Dont use response, manually add probabilities (Tony)
 // Method 2: Use response, showing it on a new text on the app
+var indico = require('indico.io');
+indico.apiKey =  '584f26a05ca718f8387fcc7ed6d845f4';
 
 var indico = require('indico.io');
 indico.apiKey =  '584f26a05ca718f8387fcc7ed6d845f4';
@@ -14,11 +16,17 @@ var response = function(res) {
 function predictMbti() {
     // Getting the text input
     var input = document.getElementById("userInput").value;
-    //alert("The text input is: " + input);
 
-    // API Input: String
-    // API Output: Array of probabilities
     alert("The predicted MBTI type is: ");
+
+    var response = function(res) { alert("The predicted MBTI type is: " + res); }
+    var logError = function(err) { alert("The predicted MBTI type is: " + err); }
+
+    // single example
+    indico.personas("I only stay home on Saturday nights to read.")
+      .then(response)
+      .catch(logError);
+
 
     var prediction = indico.personas(input);
     alert("The predicted MBTI type is: " + prediction);
