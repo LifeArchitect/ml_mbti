@@ -10,7 +10,7 @@ var response = function(res) { console.log(res); }
 function predictMbti() {
     // Getting the text input
     var input = document.getElementById("userInput").value;
-    alert("The text input is: " + input);
+    //alert("The text input is: " + input);
 
     // API Input: String
     // API Output: Array of probabilities
@@ -20,7 +20,7 @@ function predictMbti() {
 
     // var prediction = combPercent(a);
 
-    alert("The predicted MBTI type is: " + a);
+
     // alert("The predicted MBTI couldnt work :( " );
 
     return false;
