@@ -12,14 +12,9 @@
 // indico.personas("I only stay home on Saturday nights to read.")
 //   .then(function(response){console.log(response);});
 function getIndico() {
-  var input = document.getElementById("userInput").value;
-  $.post("indico/",{
-    data: input,
-  },
-   function(result, status){
+  $.ajax({url: "indico/", success: function(result){
         console.log(result);
-        document.getElementById("result").innerHTML = result;
-    });
+    }}
 }
 function predictMbti() {
     // Getting the text input

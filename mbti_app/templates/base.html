@@ -7,6 +7,7 @@
     <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}">
     <link rel="stylesheet" href="{% static 'css/app.css' %}">
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <script src="{% static 'js/jquery.js' %}"></script>
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
     <script src="{% static 'js/indico.js' %}"></script>
 
@@ -38,17 +39,16 @@
     </nav>
     <div id="body">
       <div class="container">
-        <form class = "form" method="post" action="hello" onsubmit="return false;">
-          <script src="{% static 'js/indico.js?v=00023' %}"></script>
+        <form class = "form" onsubmit="getIndico();return false;">
+          <script src="{% static 'js/indico.js' %}"></script>
           <h1>Enter Person's Text:</h1>
           <br><textarea name="nlp" rows="15" cols="150"  type="text" id="userInput"></textarea><br>
-          <input type="submit" value="Predict MBTI" class="nlp" onclick="predictMbti();">
+          <input type="submit" value="Predict MBTI" class="nlp">
           <div class="result">
             <h2>Predicted MBTI is: </h2>
+            <p id="result"></p>
           </div>
         </form>
-    {{ blockpage }}
-    {{ endblock }}
       </div>
     </div>
     <footer id="footer">
