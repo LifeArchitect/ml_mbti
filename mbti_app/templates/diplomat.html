@@ -1,0 +1,50 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Sixerr App</title>
+    <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}">
+    <link rel="stylesheet" href="{% static 'css/app.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/indico.js' %}"></script>
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="navbar-inverse">
+        <div class="container">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="/"><img src="{% static 'img/logo.jpg'%}" height="23"></a>
+          </div>
+          <form class="navbar-form navbar-left" role="search">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Find Services">
+            </div>
+          </form>
+        </div>
+      </div>
+      <div id="category">
+        <div class="container">
+          <ul class="nav navbar-nav">
+            <li><a href="#">About Us</a></li>
+            <li><a href="{% url 'analyst' %}">Analysts</a></li>
+            <li><a href="{% url 'diplomat' %}">Diplomats</a></li>
+            <li><a href="{% url 'sentinel' %}">Sentinels</a></li>
+            <li><a href="{% url 'explorer' %}">Explorers</a></li>
+        </div>
+      </div>
+
+<div class="container">
+  <h1>DIPLOMAT PAGE</h1>
+</div>
+
+<footer id="footer">
+ <div class="container">
+   <span>MBTI App &copy; 2017</span>
+ </div>
+</footer>
+</body>
+</html>

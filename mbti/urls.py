@@ -20,5 +20,9 @@ from mbti_app import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.home, name='home'),
-    url(r'^indico/$', views.indico, name='indico')
+    url(r'^indico/$', views.indico, name='indico'),
+    url(r'^analyst/$', views.analyst, name='analyst'),
+    url(r'^diplomat/$', views.diplomat, name='diplomat'),
+    url(r'^sentinel/$', views.sentinel, name='sentinel'),
+    url(r'^explorer/$', views.explorer, name='explorer')
 ]

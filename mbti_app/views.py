@@ -5,6 +5,19 @@ from django.views.decorators.csrf import csrf_exempt
 # Create your views here.
 def home(request):
     return render(request, 'base.html', {})
+
+def analyst(request):
+    return render(request, 'analyst.html', {})
+
+def diplomat(request):
+    return render(request, 'diplomat.html', {})
+
+def sentinel(request):
+    return render(request, 'sentinel.html', {})
+
+def explorer(request):
+    return render(request, 'explorer.html', {})
+
 @csrf_exempt
 def indico(request):
     data = request.POST.get('data')

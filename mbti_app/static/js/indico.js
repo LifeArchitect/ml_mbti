@@ -1,16 +1,4 @@
-// Method 1: Dont use response, manually add probabilities (Tony)
-// Method 2: Use response, showing it on a new text on the app
-// var indico = require('indico.io');
-// indico.apiKey =  '584f26a05ca718f8387fcc7ed6d845f4';
-// var response = function(res) { console.log(res); }
-// var logError = function(err) { console.log(err); }
-//
-// var response2 = function(res) { alert(res); }
-//
-// var generatedText;
-//
-// indico.personas("I only stay home on Saturday nights to read.")
-//   .then(function(response){console.log(response);});
+
 function getIndico() {
   var input = document.getElementById("userInput").value;
   $.post("indico/",{
@@ -21,47 +9,14 @@ function getIndico() {
         document.getElementById("result").innerHTML = result;
     });
 }
-function predictMbti() {
+
+//function predictMbti() {
     // Getting the text input
-    var input = document.getElementById("userInput").value;
+    //var input = document.getElementById("userInput").value;
 
-    // alert("Text is " + input);
+    //return false;
 
-    // var response = function(res) { alert("The predicted MBTI type is: " + res); }
-    // var logError = function(err) { alert("The predicted MBTI type is: " + err); }
-    // indico.personas(input)
-    //   .then(response2)
-    //   .catch(logError);
-
-    // indico.personas("I only stay home on Saturday nights to read.")
-    //   .then(function(response){alert(response);});
-      // .catch(logError);
-
-    // single example
-    // indico.personas("I only stay home on Saturday nights to read.")
-    //   .then(response)
-    //   .catch(logError);
-
-    // var prediction = indico.personas(input).then(response);
-    // alert("The predicted MBTI type is: " + prediction);
-    //
-    // indico.personas("hello there my name is tony").then(response);
-    //
-    // var a = indico.personas("hello there my name is tony").then(response);
-    // alert("The predicted MBTI type is: " + a);
-    //
-    // // var prediction = combPercent(a);
-    // var input2 = document.getElementById("resultDiv").innerHTML = person.getFullAddress();
-
-    // alert("The predicted MBTI couldnt work :( " );
-
-    return false;
-
-    // alert: text input is: ... (DONE)
-    // passing text input through API
-    // 4 x (if output of API = ...) --> load .html
-
-}
+//}
 
 /*
 // convert to class
