@@ -25,5 +25,23 @@ def indico(request):
     indicoio.config.api_key = '584f26a05ca718f8387fcc7ed6d845f4'
 
     # single example
-    result = indicoio.personas(data)
+    a = indicoio.personas(data)
+
+    w = (a['commander'] + a['debater'] + a['logician'] + a['architect'])
+    x = (a['mediator'] + a['protagonist'] + a['advocate'] + a['campaigner'])
+    y = (a['virtuoso'] + a['entrepreneur'] + a['entertainer'] + a['adventurer'])
+    z = (a['consul'] + a['logistician'] + a['executive'] + a['defender'])
+
+    vect = [w,x,y,z]
+
+    result = max(vect)
+    if result == w:
+        result = 'analyst'
+    if result == x:
+        result = 'diplomat'
+    if result == y:
+        result = 'explorer'
+    if result == z:
+        result = 'sentinel'
+
     return HttpResponse(str(result))
