@@ -10,19 +10,19 @@ function getIndico() {
    function(result, status){ // collects the result from the indico function in views.py?
 
        console.log(result);
-       if (result = 'analyst') {
-         window.location.replace("https://warm-coast-39959.herokuapp.com/analyst/");
+       if (result == "explorer") {
+         window.location.replace("https://warm-coast-39959.herokuapp.com/explorer/");
          // $( "#result" ).load( "/analyst/" );
-      } else if (result = 'diplomat') {
+      } else if (result == "diplomat") {
         window.location.replace("https://warm-coast-39959.herokuapp.com/diplomat/");
-      } else if (result = 'explorer') {
-        window.location.replace("https://warm-coast-39959.herokuapp.com/explorer/");
-      } else {
+      } else if (result == "analyst") {
+        window.location.replace("https://warm-coast-39959.herokuapp.com/analyst/");
+      } else if (result == "sentinel") {
         window.location.replace("https://warm-coast-39959.herokuapp.com/sentinel/");
       }
       // http://127.0.0.1:8000/analyst/
-
-        // document.getElementById("result").innerHTML = result; // Assigning the result to the HTML element Id = "result"
+      // https://warm-coast-39959.herokuapp.com/sentinel/
+      // document.getElementById("result").innerHTML = result; // Assigning the result to the HTML element Id = "result"
     });
 }
 
